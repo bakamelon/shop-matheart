@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤超市数心❤</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function randomInt(m, n) {
+            return m + parseInt(Math.random() * 11451419) % (n - m + 1);
+        }
+
+        function randomPic() {
+            var img = document.getElementById("img1");
+            img.src = "";
+            var id = randomInt(0, 10);
+            img.src = `./名言/${id}.png`;
+            document.getElementById("p1").innerHTML = "商品" + (id + 1);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <h1>数心超市</h1>
+        <h2>❤超市数心❤</h2>
+        <br>
+        <div class="sample">
+            <p id="p1">商品1</p>
+            <img src="./名言/0.png" alt="数心被透坏掉了" id="img1" onclick="randomPic()">
+        </div>
+        
+    </div>
+    <br>
+    <div class="footer">
+        <p>❤ Just For Matheart ❤</p>
+    </div>
+</body>
+
+</html>
